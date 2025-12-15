@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Agency - Launch Your website</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for custom colors and font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#111827',
+                        'secondary-dark': '#1F2937',
+                        'accent-blue': '#3B82F6',
+                        'accent-light': '#93C5FD',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Apply smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Style for the main container */
+        body {
+            background-color: #212736;
+            color: #58f3f3;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-primary-dark/95 backdrop-blur-sm shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-extrabold text-accent-blue tracking-tighter">
+                        Flex Agency
+                    </span>
+                </div>
+                <!-- Desktop Links -->
+                <nav class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="text-gray-300 hover:bg-secondary-dark hover:text-white px-3 py-2 rounded-lg text-sm font-medium transition duration-150">Home</a>
+                        <a href="#services" class="text-gray-300 hover:bg-secondary-dark hover:text-white px-3 py-2 rounded-lg text-sm font-medium transition duration-150">Services</a>
+                        <a href="#contact" class="text-gray-300 hover:bg-secondary-dark hover:text-white px-3 py-2 rounded-lg text-sm font-medium transition duration-150">Contact</a>
+                    </div>
+                </nav>
+                <!-- Mobile Menu Button - for demonstration, actual mobile menu state handling requires JS -->
+                <button class="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue" aria-label="Toggle menu">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-[calc(100vh-4rem)] flex items-center justify-center pt-16 pb-20 md:pb-0">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-4">
+                <span class="block text-white">We Creat</span>
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-light">A Digital Experiences.</span>
+            </h1>
+            <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-400 sm:mt-5 sm:text-2xl">
+                Flex Agency gives you a proper guideline to build a websites and brands that  drive growth and engagement.
+            </p>
+            <div class="mt-10 flex justify-center space-x-4">
+                <a href="#services" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xl text-white bg-accent-blue hover:bg-blue-600 transition duration-300 shadow-xl shadow-accent-blue/40 transform hover:scale-105">
+                    Our Services
+                </a>
+                <a href="#contact" class="inline-flex items-center justify-center px-8 py-3 border border-gray-600 text-base font-medium rounded-xl text-gray-300 bg-secondary-dark hover:bg-gray-700 transition duration-300 transform hover:scale-105">
+                    Sing up                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-secondary-dark/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-base text-accent-light font-semibold tracking-wide uppercase">What We Offer</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                    Comprehensive Digital Solutions
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Feature 1: Web Development -->
+                <div class="p-8 bg-secondary-dark rounded-2xl shadow-2xl transition duration-300 hover:shadow-accent-blue/20 hover:ring-2 ring-accent-blue">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-accent-blue text-white mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Custom Web Development</h3>
+                    <p class="text-gray-400">
+                        We develop high-performance, secure, and scalable websites tailored to your exact business needs, using modern frameworks like React and Vue.js.
+                    </p>
+                </div>
+
+                <!-- Feature 2: UI/UX Design -->
+                <div class="p-8 bg-secondary-dark rounded-2xl shadow-2xl transition duration-300 hover:shadow-accent-blue/20 hover:ring-2 ring-accent-blue">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-accent-blue text-white mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Intuitive UI/UX Design</h3>
+                    <p class="text-gray-400">
+                        Our focus is on creating beautiful interfaces that offer seamless user experiences, backed by thorough user research and testing.
+                    </p>
+                </div>
+
+                <!-- Feature 3: Branding & Strategy -->
+                <div class="p-8 bg-secondary-dark rounded-2xl shadow-2xl transition duration-300 hover:shadow-accent-blue/20 hover:ring-2 ring-accent-blue">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-accent-blue text-white mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v14m-6 3H9v-3m12 0H9"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Branding & Strategy</h3>
+                    <p class="text-gray-400">
+                        Develop a strong, consistent, and memorable brand identity that communicates your values and resonates with your target audience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section (Contact Form Placeholder) -->
+    <section id="contact" class="py-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 bg-secondary-dark p-10 rounded-2xl shadow-2xl">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-extrabold text-white">Are You Ready to Start Your Project?</h2>
+                <p class="mt-2 text-xl text-gray-400">
+                    Tell us about your idea and let's build something  together.
+                </p>
+            </div>
+
+            <!-- Form Placeholder -->
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Alex Don"
+                           class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-accent-blue focus:border-accent-blue bg-primary-dark text-white placeholder-gray-500 transition duration-150">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="abcd123@gmail.com"
+                           class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-accent-blue focus:border-accent-blue bg-primary-dark text-white placeholder-gray-500 transition duration-150">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-300">Your Idea</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="I need a modern e-commerce site to build our communicate strong.."
+                              class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-accent-blue focus:border-accent-blue bg-primary-dark text-white placeholder-gray-500 transition duration-150"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-accent-blue hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-blue transition duration-300">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400 text-sm">
+                &copy; 2025 Flex Agency. All rights reserved. | <a href="#" class="hover:text-accent-blue transition duration-150">Privacy Policy</a> | <a href="#" class="hover:text-accent-blue transition duration-150">Terms of Service</a>
+            </p>
+            <div class="mt-4 space-x-4">
+                <a href="https://twitter.com/placeholder" target="_blank" class="text-gray-400 hover:text-accent-light transition duration-150" aria-label="Twitter">
+                    <!-- Placeholder SVG Icon for Twitter -->
+                    <svg class="inline-block h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.254 5.922c-.676.3-1.405.514-2.17.608.777-.464 1.376-1.2 1.658-2.077-.723.43-1.52.744-2.368.917-.685-.73-1.658-1.187-2.73-1.187-2.068 0-3.75 1.683-3.75 3.75 0 .295.033.58.095.858C9.557 9.172 5.047 6.89 2.052 3.528c-.32.55-.49 1.184-.49 1.862 0 1.298.66 2.446 1.658 3.123-.61-.018-1.184-.187-1.68-.464v.047c0 1.82 1.296 3.33 3.016 3.68c-.316.085-.647.128-.99.128-.242 0-.476-.024-.703-.075.476 1.49 1.868 2.57 3.5 2.62-1.288 1.01-2.904 1.61-4.664 1.61-.303 0-.598-.018-.888-.057 1.666 1.07 3.64 1.69 5.766 1.69 6.91 0 10.68-5.72 10.68-10.68 0-.16-.004-.32-.012-.48.73-.526 1.36-1.183 1.86-1.93z"/></svg>
+                </a>
+                <a href="https://linkedin.com/placeholder" target="_blank" class="text-gray-400 hover:text-accent-light transition duration-150" aria-label="LinkedIn">
+                    <!-- Placeholder SVG Icon for LinkedIn -->
+                    <svg class="inline-block h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.75c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm12.5 12.75h-3v-5.618c0-3.094-1.748-4.577-4.01-4.577-1.896 0-2.915 1.066-3.352 2.086v2.585h-3v-11h3v1.732c.57-.878 1.66-2.086 4.314-2.086 2.943 0 5.686 1.948 5.686 6.842v6.618z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for Mobile Menu Toggle (Functionality only) -->
+    <script>
+        // Note: For a real app, you would need to implement the responsive menu open/close logic here
+        // The current mobile menu button is purely presentational to hint at the feature.
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.querySelector('button[aria-label="Toggle menu"]');
+            const navMenu = document.querySelector('nav:not(.hidden)'); // Targeting desktop nav for simplicity
+            
+            // In a full implementation, you would add classes to toggle visibility on the hidden menu.
+            // e.g. mobileMenuButton.addEventListener('click', () => { ... });
+        });
+    </script>
+
+</body>
+</html>
